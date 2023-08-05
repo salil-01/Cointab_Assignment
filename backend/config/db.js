@@ -6,18 +6,23 @@ const databaseConfig = {
   password: "salil",
   database: "cointab",
 };
-let connection;
 
-const connectToDB = async () => {
+// // create table if there is not any table in db
+const createTable = async () => {
   try {
-    if (!connection) {
-      connection = await mysql.createConnection(databaseConfig);
-      console.log("Connected to DB");
-    }
+    const connection = await mysql.createConnection(databaseConfig);
+    const query = `
+       CREATE TABLE IF NOT EXISTS users(
+        name VARCHAR(50),
+        age INT
+       )
+       `;
+    await connection.query(query);
+    connection.end();
+    console.log("Table Created Successfully");
   } catch (error) {
-    console.log("Error Connecting to DB", error);
-    throw error;
+    console.log(error);
   }
 };
 
-module.exports = connectToDB;
+module.exports = { createTable, databaseConfig };

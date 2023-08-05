@@ -1,4 +1,5 @@
 const Joi = require("joi");
+
 const nameSchema = Joi.object({
   title: Joi.string().max(10),
   first: Joi.string().max(50),
@@ -74,4 +75,5 @@ const dataSchema = Joi.object({
     version: Joi.string(),
   }),
 });
+
 module.exports = { dataSchema };
