@@ -1,5 +1,7 @@
 const express = require("express");
 const cors = require("cors");
+const connectToDB = require("./config/db");
+const { userRouter } = require("./routes/User.route");
 const app = express();
 
 // middlewares
@@ -10,9 +12,14 @@ app.get("/", (req, res) => {
   res.status(200).send("Home Page");
 });
 
-app.listen(8080, () => {
+// user route
+app.use("/user", userRouter);
+
+// server configs
+app.listen(8080, async () => {
   try {
-    console.log(`Server running ar port ${8080}`);
+    await connectToDB();
+    console.log(`Server running at port ${8080}`);
   } catch (error) {
     console.log(error);
   }
