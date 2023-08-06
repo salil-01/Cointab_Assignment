@@ -26,7 +26,11 @@ export const Users = () => {
 
   const fetchData = async (page, filter) => {
     setIsLoading(true);
-    fetch(`http://localhost:8080/user/?page=${page}`)
+    fetch(
+      `http://localhost:8080/user/?page=${page}${
+        filter ? `&country=${filter}` : null
+      }`
+    )
       .then((res) => res.json())
       .then((actualData) => {
         // console.log(actualData);
@@ -49,8 +53,9 @@ export const Users = () => {
     setCurrentPage(page);
   };
 
-  const handleFilterChange = (event) => {
-    setFilterValue(event.target.value);
+  const handleFilterChange = (e) => {
+    console.log(e.target.value);
+    setFilterValue(e.target.value);
     setCurrentPage(1); // Reset to the first page when the filter changes
   };
 
