@@ -13,6 +13,7 @@ const createTable = async () => {
     const connection = await mysql.createConnection(databaseConfig);
     const query = `
     CREATE TABLE IF NOT EXISTS users (
+      id INT AUTO_INCREMENT PRIMARY KEY,
       gender VARCHAR(10),
       title VARCHAR(10),
       first_name VARCHAR(50),
