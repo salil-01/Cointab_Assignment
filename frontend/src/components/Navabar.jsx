@@ -8,9 +8,12 @@ export const Navbar = () => {
         justifyContent={"space-around"}
         alignItems={"center"}
         fontSize={"20px"}
+        bg={"teal.200"}
+        fontWeight={"bold"}
+        padding={"10px"}
       >
         <Link to={"/"}>Homepage</Link>
-        <Link to={"/data"}>Data</Link>
+        <Link to={"/userdetails"}>User Details</Link>
       </Flex>
     </>
   );

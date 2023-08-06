@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import {
+  Box,
   Button,
+  Center,
   Flex,
   Modal,
   ModalBody,
@@ -9,6 +11,7 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
+  Text,
   useToast,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
@@ -130,31 +133,34 @@ export const Homepage = () => {
 
   return (
     <>
-      <Flex
-        justifyContent={"space-around"}
-        marginTop={"50px"}
-        alignItems={"center"}
-      >
-        <Button
-          variant={"solid"}
-          colorScheme={"teal"}
-          onClick={handleClickFetchData}
-          mr={2}
-        >
-          Fetch Data
-        </Button>
-        <Button
-          variant={"solid"}
-          colorScheme={"teal"}
-          onClick={handleClickDeleteData}
-          mr={2}
-        >
-          Delete Data
-        </Button>
-        <Button variant={"solid"} colorScheme={"teal"}>
-          <Link to={"/data"}>Show Data</Link>
-        </Button>
-      </Flex>
+      <Box width={"60%"} margin={"auto"} marginTop={"5%"}>
+        <Center>
+          <Text fontSize={"20px"} fontWeight={"bold"}>
+            Cointab Assignment
+          </Text>
+        </Center>
+        <Flex justifyContent={"space-around"} alignItems={"center"} mt={"50px"}>
+          <Button
+            variant={"solid"}
+            colorScheme={"teal"}
+            onClick={handleClickFetchData}
+            mr={2}
+          >
+            Fetch Data
+          </Button>
+          <Button
+            variant={"solid"}
+            colorScheme={"teal"}
+            onClick={handleClickDeleteData}
+            mr={2}
+          >
+            Delete Data
+          </Button>
+          <Button variant={"solid"} colorScheme={"teal"}>
+            <Link to={"/userdetails"}>Show User Details</Link>
+          </Button>
+        </Flex>
+      </Box>
       <Modal
         isOpen={showDeleteConfirmation}
         onClose={() => setShowDeleteConfirmation(false)}

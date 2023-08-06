@@ -60,14 +60,14 @@ export const Users = () => {
         <Heading as={"h4"}>User Details</Heading>
       </Center>
       <Flex alignItems={"center"} gap={"40px"} mx={"40px"} mt={"60px"}>
-        <Text>Filter By Country</Text>
+        <Text fontSize={"18px"}>Filter By Country</Text>
         <Select
           onChange={handleFilterChange}
           border={"1px dotted gray"}
           width={"20%"}
           value={filterValue}
         >
-          <option value="">All</option>
+          <option value="">Select Country</option>
           <option value="United States">United States</option>
           <option value="India">India</option>
           <option value="Norway">Norway</option>
@@ -80,6 +80,15 @@ export const Users = () => {
       <Box mt={"50px"}>
         {isLoading ? (
           <Spinner size={"xl"} />
+        ) : data.length === 0 ? (
+          <Box>
+            <Center>
+              <Text fontSize={"18px"} fontWeight={"bold"}>
+                {" "}
+                No User Data, please fetch some data from Home Page
+              </Text>
+            </Center>
+          </Box>
         ) : (
           <TableContainer>
             <Table
