@@ -94,7 +94,7 @@ https://github.com/salil-01/Cointab_Assignment/assets/115460357/aaad4f38-a3f7-40
 - [https://randomuser.me/api/?results=50](https://randomuser.me/api) is used to fetch data in bulk.
 
 ## API Endpoints
-GET /api/user - retrieve all users stored in database
-POST /api/user - to store bulk data in database
-DELETE /api/user - to delete all users stored in database
+- GET /api/user - retrieve all users stored in database
+- POST /api/user - to store bulk data in database
+- DELETE /api/user - to delete all users stored in database
 
