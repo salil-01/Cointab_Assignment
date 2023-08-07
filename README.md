@@ -1,6 +1,6 @@
 # Bulk Data Management App
 
-This is a full-stack web application built with React Js, Chakra UI, Node.js, Express, and MySQL.
+It is a full-stack web application built with React Js, Chakra UI, Node.js, Express, and MySQL.
 The app fetches data from a REST API, processes it, and stores it in a MySQL database.
 It provides functionality to delete all stored data and display stored data in a tabular format with filtering based on the country.
 
