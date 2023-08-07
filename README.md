@@ -6,6 +6,7 @@ It provides functionality to delete all stored data and display stored data in a
 
 ## Table of Contents
 
+- [Video Walkthrough](#video-walkthrough)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
@@ -15,6 +16,9 @@ It provides functionality to delete all stored data and display stored data in a
 - [Usage](#usage)
 - [APIs Used](#apis-used)
 - [API Endpoints](#api-endpoints)
+
+## Video Walkthrough
+https://github.com/salil-01/Cointab_Assignment/assets/115460357/aaad4f38-a3f7-40dc-b489-4797b6159be2
 
 ## Features
 
