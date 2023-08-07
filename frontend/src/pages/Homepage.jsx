@@ -28,7 +28,9 @@ export const Homepage = () => {
       .then((res) => res.json())
       .then((actualData) => {
         console.log(actualData);
-        postData(actualData);
+        setTimeout(() => {
+          postData(actualData);
+        }, 2000);
       })
       .catch((error) => {
         console.log(error);
@@ -62,7 +64,13 @@ export const Homepage = () => {
       .catch((error) => {
         console.log(error);
         setIsLoading(false);
-        alert("Error while fetching data");
+        toast({
+          title: "Error while posting data",
+          position: "top-right",
+          status: "error",
+          duration: 3000,
+          isClosable: true,
+        });
       });
   }
 

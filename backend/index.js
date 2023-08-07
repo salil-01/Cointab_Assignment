@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const { userRouter } = require("./routes/User.route");
-const { createTable } = require("./config/db");
+const { createTable } = require("./models/User.model");
 const app = express();
 
 // middlewares
